@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <h1>EECS 348 Lab Seven Practice Two</h1>
+</head>
+
+<body>
+    <p id = "a" style="border-width:5px; border-style: solid; margin-bottom: 0">Paragraph to be altered.</p>
+    Border R(0-255): <input type="text" id="b"> <br>
+        Border G(0-255): <input type="text" id="c"> <br>
+        Border B(0-255): <input type="text" id="d"><br>
+        Border Width: <input type="text" id="e"><br>
+        Background R(0-255): <input type="text" id="f"><br>
+        Background G(0-255): <input type="text" id="g"><br>
+        Background B(0-255): <input type="text" id="h"><br>
+    <button id="i">Change the color!</button>
+</body>
+<script>
+    document.getElementById("i").addEventListener("click", () => {
+        let a = document.getElementById("a");
+        let b = document.getElementById("b").value;
+        let c = document.getElementById("c").value;
+        let d = document.getElementById("d").value;
+        let e = document.getElementById("e").value;
+        let f = document.getElementById("f").value;
+        let g = document.getElementById("g").value;
+        let h = document.getElementById("h").value;
+
+        if(e!="")
+        {
+            let bw = "border-width:" + e + "px; border-style: solid; margin-bottom: 0"
+            a.style = bw;
+        }
+        
+            a.style.borderColor = `rgb(${b},${c},${d})`;
+            a.style.backgroundColor = `rgb(${f},${g},${h})`;
+        
+
+    });
+
+    
+</script>
+
+</html>
